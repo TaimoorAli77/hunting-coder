@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import homeImg from '../../public/h.jpg'
-import Link from 'next/link'
 // import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -31,25 +30,7 @@ export default function Home() {
       </Head>
       {/* <Script  src='/sc.js' strategy='lazyOnload'></Script> */}
 
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href='/' >
-          <li>Home</li>
-          </Link>
-
-          <Link href='/about' >
-           <li>About</li>
-          </Link>
-
-          <Link href='/contact'>
-           <li>Contact</li>
-          </Link>
-
-          <Link href='/blog'>
-            <li>Blog</li>
-          </Link>
-        </ul>
-      </nav>
+     
 
 
       <main className={`${styles.main} ${inter.className}`}>
