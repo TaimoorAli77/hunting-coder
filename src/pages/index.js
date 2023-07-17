@@ -2,11 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-// import styles1 from '@/styles/Home1.module.css'
-// import styles2 from '@/styles/Home2.module.css'
-
+import homeImg from '../../public/h.jpg'
 import Link from 'next/link'
-import Dummy from '../../components/dummy'
 // import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,12 +13,13 @@ export default function Home() {
 
   return (
     <>
-    <Dummy />
     <style jsx>
       {`
-      .myspan{
-        color:blue;
+      .cen{
+        text-align:center;
+        padding-bottom:3em;
       }
+     
       `}
     </style>
       <Head>
@@ -58,10 +56,17 @@ export default function Home() {
 
         <main >
           <h1 className={styles.huntingHead}> 
-          <span className='myspan dum'>
+          <span className=''>
             Hunting Coder 
             </span>
             </h1>
+            <div className='cen'>
+
+            <Image className={styles.myimg}  src={homeImg} height={100} width={134}>
+            </Image>
+            </div>
+
+
           <h2>Popular Blogs</h2><br></br>
 
           <div>
@@ -93,16 +98,7 @@ export default function Home() {
 
 
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
+      
 
 
       </main>
