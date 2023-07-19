@@ -43,7 +43,7 @@ export default function Home() {
             </h1>
             <div className='cen'>
 
-            <Image className={styles.myimg}  src={homeImg} height={100} width={134}>
+            <Image className={styles.myimg} alt='Coder Puc' priority={true}  src={homeImg} height={100} width={134}>
             </Image>
             </div>
 
