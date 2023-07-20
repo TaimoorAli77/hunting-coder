@@ -11,19 +11,27 @@ const Blog = (props) => {
 
   return (
     <>
+    <div className= {styles.all}>
+
+  
       <main className={styles.main} >
 
-        <h2>Popular Blogs</h2><br></br>
+        <h2 className={styles.h22}>Popular Blogs</h2><br></br>
         {blogs.map((blogitem) => {
           return <div key={blogitem.slug}>
-            <Link href={`/blogpost/${blogitem.slug}`}>
-              <h3>{blogitem.title}</h3></Link>
+            <br></br>
+              <h3>{blogitem.title}</h3>
+            <br></br>
             <p>{blogitem.metadesc.substr(0,70)}</p>
+            <Link href={`/blogpost/${blogitem.slug}`}>
+        <button className={styles.submit}>Read More</button></Link>
+        <br></br>
+
             <br></br>
           </div>
         })}
       </main>
-
+      </div>
     </>
   );
 }

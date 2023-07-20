@@ -55,23 +55,24 @@ setPhone("")
       <form onSubmit={handleSubmit}>
         <div className={styles.mb}>
           <label htmlFor="name" className={styles.label}>Name</label>
-          <input type="text" onChange={handleChange} className="form-control" id="name" value={name} name="name" aria-describedby="emailHelp" />
+          <input type="text" className={styles.input} onChange={handleChange}  id="name" value={name} name="name" aria-describedby="emailHelp" />
         </div>
 
         <div className={styles.mb}>
           <label htmlFor="phone" className={styles.label}>Phone Number</label>
-          <input type="number" onChange={handleChange} value={phone} className="form-control" id="phone" name="phone" aria-describedby="emailHelp" />
+          <input type="number" onChange={handleChange} value={phone} className={styles.input} id="phone" name="phone" aria-describedby="emailHelp" />
         </div>
         <div className={styles.mb}>
           <label htmlFor="email"  className={styles.label}>Email address</label>
-          <input type="email" value={email} onChange={handleChange} className="form-control" id="email" name="email" aria-describedby="emailHelp" />
+          <input type="email" value={email} onChange={handleChange} required className={styles.input} id="email" name="email" aria-describedby="emailHelp" />
+          <div className={styles.formtext}>We will never share your email with anyone else.</div>
         </div>
         <div className={styles.mb}>
           <label htmlFor="desc" className={styles.label}>Elaborate your concerns</label>
-          <textarea className="form-control" onChange={handleChange} value={desc} placeholder="Write your concerns here" name="desc" id="desc" style={{"height": 70 }}/>
+          <textarea className={styles.textarea} onChange={handleChange} value={desc} placeholder="Write your concerns here" name="desc" id="desc" style={{"height": 70 }}/>
         </div>
 
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className={styles.submit}>Submit</button>
       </form>
     </div>
   )

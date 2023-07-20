@@ -241,10 +241,28 @@
 }
 
 .huntingHead{
-  margin:  2em 0em ;
+  margin:  8px 0em ;
   text-align: center;
+  font-size: 4em;
+
 }
  .myimg{
-  border-radius:20px;
-
+  border-radius: 55%;
+  width: 7rem;
+}
+.cen{
+  text-align: center;
+    padding-top: 2em;
+}
+.pop{
+  font-size:1.7em;
+  padding-top : 2rem;
+}
+.submit{
+  padding: 0.4em 0.8em;
+  font-size: 1em;
+  color: white;
+  background: black;
+  border-radius: 1em;
+  cursor: pointer;
 }
