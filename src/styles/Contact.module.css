@@ -1,0 +1,26 @@
+
+/* //To center */
+  /* .main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+
+  } */
+
+  .main{
+    max-width: 30vw;
+    margin: auto;
+    padding-top: 3em;
+  }
+  .mb{
+    padding-bottom: 1.5em;
+  }
+  .label{
+    padding: 0 15px;
+  }
+  .h1{
+    padding-bottom: 1em;
+  }
