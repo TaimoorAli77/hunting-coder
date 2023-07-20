@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import homeImg from '../../public/h.jpg'
-// import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,8 +41,10 @@ export default function Home() {
             </h1>
             <div className='cen'>
 
-            <Image className={styles.myimg} alt='Coder Puc' priority={true}  src={homeImg} height={100} width={134}>
-            </Image>
+            {/* <Image className={styles.myimg} alt='Coder Puc' priority={true}  src={homeImg} height={100} width={134}>
+            </Image> */}
+            {/* // for static side generation we can not use next Image  */}
+            <img className={styles.myimg} src='/h.png' alt='missing' height={100} width={134} />
             </div>
 
 

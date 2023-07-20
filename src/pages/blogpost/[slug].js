@@ -1,7 +1,7 @@
 import React , {useState , useEffect} from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Blogpost.module.css'
-
+import * as fs from 'fs';
 //Find the file corresponding to the slug
 //populate them inside the page
 const Slug = (props) => {
@@ -20,11 +20,23 @@ const Slug = (props) => {
 }
 
 
-export async function getServerSideProps(context){
-  const {slug} = context.query;
+export async function getStaticPaths(){
+  return{
+    paths:[
+      {params:{ slug :  "how-to-learn-Django"}},
+      {params:{ slug :  "how-to-learn-flask"}},
+      {params:{ slug :  "how-to-learn-javascript"}},
+      {params:{ slug :  "how-to-learn-NextJS"}},
 
-  const data = await fetch(`http://localhost:3000/api/getblogs?slug=${slug}`)
-  const blog = await data.json()
+    ],
+    fallback : true 
+  };
+}
+
+export async function getStaticProps(context){
+  const {slug} = context.params;
+  let myblog = await fs.promises.readFile(`blogdata/${slug}.json` , 'utf-8')
+let blog = JSON.parse(myblog)
   return{
     props:{blog}
   }
