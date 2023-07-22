@@ -1,8 +1,10 @@
 const fs = require('fs')
 
 export default async function handler(req,res){
-try {
-  let data = await fs.promises.readdir("blogdata")
+  try {
+  console.log(req.query.count)
+  let datas = await fs.promises.readdir("blogdata");
+  let data = datas.slice(0,parseInt(req.query.count))
   let myfile;
   let allblogs = []
   for (let index = 0; index < data.length; index++) {
