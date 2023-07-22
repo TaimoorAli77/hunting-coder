@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 const Navbar = () => {
@@ -18,7 +17,6 @@ const Navbar = () => {
           <Link href='/contact'>
            <li>Contact</li>
           </Link>
-
           <Link href='/blog'>
             <li>Blog</li>
           </Link>

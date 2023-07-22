@@ -1,13 +1,25 @@
-.main{
+.main {
     max-width: 40vw;
     margin: auto;
     padding-top: 3.5rem;
 }
-.headOne{
+
+.headOne {
     padding-bottom: 1em;
     text-align: center;
 }
-.headtwo{
+
+.headtwo {
     padding-bottom: 0.31em;
     padding-top: 1em;
+}
+
+
+@media only screen and (max-width:900px) {
+    .main {
+        max-width: 81vw;
+        margin: auto;
+        text-align: justify;
+        padding-top: 3.5rem;
+    }
 }
